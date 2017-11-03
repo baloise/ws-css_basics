@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>CSS Workshop - Basics</title>
+
+    <link rel="stylesheet" href="../css/reveal.css">
+    <link rel="stylesheet" href="../css/theme/baloise.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="../lib/css/atom-one-dark.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '../css/print/pdf.css' : '../css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+</head>
+<body>
+<div class="reveal">
+    <div class="slides">
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Basics</h1>
+        </section>
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Selectors</h1>
+        </section>
+        <section>
+            <section>
+                <h2>By Id</h2>
+                <h3>#awesomeId</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+                        &lt;body&gt;
+                            &lt;div id="awesomeId"&gt;&lt;/div&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>By Class</h2>
+                <h3>.some_class</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+                        &lt;body&gt;
+                            &lt;p class="some_class"&gt;&lt;/p&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>By Type (tag)</h2>
+                <h3>span</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+                        &lt;body&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>By Attribute</h2>
+                <h3>[href="google.ch"]</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+                        &lt;body&gt;
+                            &lt;a href="google.ch"&gt;&lt;/a&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>By Pseudo Class</h2>
+                <h3>:first-child</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+                        &lt;body&gt;
+                            &lt;div&gt;This will get the styles&lt;/div&gt;
+                            &lt;div&gt;&lt;/div&gt;
+                            &lt;div&gt;&lt;/div&gt;
+                            &lt;div&gt;&lt;/div&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>Universal Selectors</h2>
+                <h3>*</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+                        &lt;body&gt;
+                            &lt;div&gt;&lt;/div&gt;
+                            &lt;span&gt;&lt;/span&gt;
+                            &lt;a&gt;&lt;/a&gt;
+                        &lt;/body&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h2>Precedence</h2>
+                <ul>
+                    <li>Inline Styles</li>
+                    <li>ID Selector</li>
+                    <li>Pseudo Classes</li>
+                    <li>Attribute Selectors</li>
+                    <li>Class Selectors</li>
+                    <li>Type Selectors</li>
+                    <li>Universal Selectors</li>
+                </ul>
+            </section>
+        </section>
+
+        <section>
+            <h2>Question Time!</h2>
+            <img src="../img/mustache_question.jpg" width="80%">
+        </section>
+    </div>
+</div>
+<script src="../lib/js/head.min.js"></script>
+<script src="../js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: '../plugin/markdown/marked.js'},
+            {src: '../plugin/markdown/markdown.js'},
+            {src: '../plugin/notes/notes.js', async: true},
+            {
+                src: '../plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
