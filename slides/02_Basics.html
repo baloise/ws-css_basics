@@ -125,22 +125,36 @@
                 <img src="../img/box-model-css.png">
             </section>
             <section>
-                <h3>padding</h3>
-                <p>
-
-                </p>
+                <h3>box-sizing</h3>
+                <p>What gets included in width and height calculation</p>
+                <ul>
+                    <li>content-box</li>
+                    <li>border-box</li>
+                </ul>
             </section>
             <section>
-                <h3>border</h3>
-                <p>
-
-                </p>
+                <h3>content-box</h3>
+                <ul>
+                    <li>only content of the element is included</li>
+                    <li>padding, border and margin are added on top</li>
+                </ul>
             </section>
             <section>
-                <h3>margin</h3>
-                <p>
-
-                </p>
+                <h3>border-box</h3>
+                <ul>
+                    <li>content, padding and border are included</li>
+                    <li>only margin is added on top</li>
+                    <li>mostly the setting we want but not default</li>
+                </ul>
+            </section>
+            <section>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        * {
+                            box-sizing: border-box;
+                        }
+                    </code>
+                </pre>
             </section>
         </section>
 
