@@ -32,12 +32,108 @@
             <h1>Flexbox</h1>
         </section>
         <section>
+            <h3>Why?</h3>
+            <ul>
+                <li>Vertical and horizontal layouting</li>
+                <li>Dynamic flowing on various screen sizes</li>
+                <li>Dynamically use up open space</li>
+            </ul>
+        </section>
+        <section>
             <section>
-                <h3>tbd</h3>
-                <p>
-
-                </p>
+                <h3>Basics</h3>
             </section>
+            <section>
+                <h3>Container (parent)</h3>
+                <img src="../img/flexbox/flex-container.svg" />
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            display: flex;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>flex-direction</h3>
+                <img src="../img/flexbox/flex-direction.svg" width="50%" />
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            flex-direction: row | row-reverse | column | column-reverse;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>flex-wrap</h3>
+                <img src="../img/flexbox/flex-wrap.svg" width="50%" />
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            flex-wrap: nowrap | wrap | wrap-reverse;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>justify-content (main axis)</h3>
+                <img src="../img/flexbox/justify-content.svg" width="40%" />
+            </section>
+            <section>
+                <h3>align-items (cross axis)</h3>
+                <img src="../img/flexbox/align-items.svg" width="50%" />
+            </section>
+            <section>
+                <h3>Items (children)</h3>
+                <img src="../img/flexbox/flex-items.svg" />
+            </section>
+            <section>
+                <h3>order</h3>
+                <img src="../img/flexbox/order.svg" width="60%" />
+            </section>
+            <section>
+                <h3>flex property</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .item {
+                            flex: none
+                                | <'flex-grow'> <'flex-shrink'> <'flex-basis'>
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>flex-basis</h3>
+                <ul>
+                    <li>Starting point before growing/shrinking</li>
+                    <li>Every Unit (%, px, em, rem ...)</li>
+                </ul>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .item {
+                            flex-basis: &lt;length&gt; | auto; /* default auto */
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>flex-grow/flex-shrink</h3>
+                <img src="../img/flexbox/flex-grow.svg" width="50%" />
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .item {
+                            flex-grow: &lt;number&gt;; /* default 0 */
+                            flex-shrink: &lt;number&gt;; /* default 1 */
+                        }
+                    </code>
+                </pre>
+            </section>
+        </section>
+        <section>
+            <h2>Exercise Time!</h2>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+            <img src="../img/sheep_exercise.jpg">
         </section>
 
         <section class="deck-slide" data-background="#E5F3F9">
