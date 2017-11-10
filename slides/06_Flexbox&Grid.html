@@ -132,12 +132,137 @@
         </section>
         <section>
             <h2>Exercise Time!</h2>
-            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a>
+            <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a><br>
+            <a href="https://github.com/philipwalton/flexbugs/">https://github.com/philipwalton/flexbugs/</a><br>
             <img src="../img/sheep_exercise.jpg">
         </section>
 
         <section class="deck-slide" data-background="#E5F3F9">
             <h1>Grid Layout</h1>
+        </section>
+        <section>
+            <section>
+                <h2>Browser Support</h2>
+                <img src="../img/grid-layout/browser_support.png">
+            </section>
+            <section>
+                <h2>Usage relative</h2>
+                <img src="../img/grid-layout/browser_support_relative.png">
+            </section>
+        </section>
+        <section>
+            <section>
+                <h3>Basics</h3>
+            </section>
+            <section>
+                <h3>Grid Container (parent)</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            display: grid | inline-grid | subgrid;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>grid-template-columns / grid-template-rows</h3>
+                <img src="../img/grid-layout/grid-numbers.png" />
+            </section>
+            <section>
+                <h3>grid-template-columns / grid-template-rows</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+                            grid-template-rows: [row1-start] 25% [row1-end row2-start] 100px [row2-end row3-start] auto [row3-end];
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>fr (fractions)</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                          grid-template-columns: 1fr 50px 1fr 1fr;
+                        }
+                    </code>
+                </pre>
+                <aside class="notes">
+                    available space is calculated after non flexible items<br>
+                    (grid container size - 50px) / 3fr
+                </aside>
+            </section>
+            <section>
+                <h3>grid-template-areas</h3>
+                <img src="../img/grid-layout/grid-template-areas.png" />
+            </section>
+            <section>
+                <h3>grid-template-areas</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            grid-template-columns: 50px 50px 50px 50px;
+                            grid-template-rows: auto;
+                            grid-template-areas:
+                                "header header header header"
+                                "main main . sidebar"
+                                "footer footer footer footer";
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>grid-template-areas</h3>
+                <ul>
+                    <li>automatic line names (header-start, header-end)</li>
+                    <li>column and row lines</li>
+                    <li>shorthand: <strong>grid-template</strong></li>
+                </ul>
+            </section>
+            <section>
+                <h3>More properties to check out</h3>
+                <ul>
+                    <li>grid-gap</li>
+                    <li>justify-items, justify-content</li>
+                    <li>align-items, align-content</li>
+                    <li>and a lot more</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Grid Items (children)</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .item {
+                            grid-column-start: 2;
+                            grid-column-end: five;
+                            grid-row-start: row1-start;
+                            grid-row-end: span 2
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>grid-area</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .item {
+                            grid-area: header;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>More properties to check out</h3>
+                <ul>
+                    <li>justify-self</li>
+                    <li>align-self</li>
+                </ul>
+            </section>
+        </section>
+        <section>
+            <h3>Resources</h3>
+            <a href="https://css-tricks.com/snippets/css/complete-guide-grid/">https://css-tricks.com/snippets/css/complete-guide-grid/</a>
         </section>
 
         <section>
