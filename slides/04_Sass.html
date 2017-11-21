@@ -29,14 +29,76 @@
         </section>
 
         <section class="deck-slide" data-background="#E5F3F9">
-            <h1>Stuff about Sass</h1>
+            <h1>Why?</h1>
         </section>
         <section>
             <section>
-                <h3>tbd</h3>
-                <p>
+                <h3>CSS shortcomings</h3>
+                <ul>
+                    <li>Variables (CSS 4)</li>
+                    <li>Scope/Specificity</li>
+                    <li>Abstraction/Code Sharing</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Variables</h3>
+                <img src="../img/sass/variable-support.png" />
+            </section>
+            <section>
+                <h3>Scope/Specificity</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
 
-                </p>
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Abstraction/Code Sharing</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        p {
+                            margin: 0 auto;
+                            padding: 10px;
+                        }
+
+                        .my-paragraph {
+                            margin: 0 auto;
+                            padding: 10px;
+                            ...
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .block-spacing {
+                            margin: 0 auto;
+                            padding: 10px;
+                        }
+
+                        p {
+                            color: papayawhip;
+                        }
+
+                        .my-paragraph {
+                            color: palevioletred;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable>
+                        <p class="block-spacing">
+                            Lorem ipsum...
+                        </p>
+
+                        <div class="block-spacing my-paragraph">
+                            Dolor sit amet..
+                        </div>
+                    </code>
+                </pre>
             </section>
         </section>
 
