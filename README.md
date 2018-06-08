@@ -1,4 +1,4 @@
-## Inhalt
+## Content
 - [01 Intro](https://baloise.github.io/ws-css_basics/slides/01_Intro.html)
 - [02 Basics](https://baloise.github.io/ws-css_basics/slides/02_Basics.html)
 - [03 Responsive](https://baloise.github.io/ws-css_basics/slides/03_Responsive.html)
