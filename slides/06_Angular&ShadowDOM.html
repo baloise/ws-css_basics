@@ -28,15 +28,27 @@
             <h1>Angular specifics and Shadow DOM</h1>
         </section>
 
-        <section class="deck-slide" data-background="#E5F3F9">
-            <h1>Stuff about encapsulated Styles and Shadow DOM</h1>
-        </section>
         <section>
-            <section>
-                <h3>tbd</h3>
-                <p>
 
-                </p>
+
+            <section class="deck-slide" data-background="#E5F3F9">
+                <h1>Stuff about encapsulated Styles and Shadow DOM</h1>
+            </section>
+            <section>
+                <h2>DOM today</h2>
+                <ul>
+                    <li>single DOM tree in the browser</li>
+                    <li>all JS and CSS works againstthe entire tree</li>
+                    <li>no encapsulation, only with hacks</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Shadow DOM</h2>
+                <ul>
+                    <li> DOM that is isolated from the regular DOM</li>
+                    <li>full encapsulation for javascript and CSS written against this DOM</li>
+                    <li>implemented only in Chrome</li>
+                </ul>
             </section>
         </section>
 
@@ -61,8 +73,8 @@
             {src: '../plugin/notes/notes.js', async: true},
             {
                 src: '../plugin/highlight/highlight.js', async: true, callback: function () {
-                hljs.initHighlightingOnLoad();
-            }
+                    hljs.initHighlightingOnLoad();
+                }
             }
         ]
     });
