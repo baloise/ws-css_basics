@@ -61,10 +61,13 @@
             </section>
         </section>
         <section>
+            <section class="deck-slide">
+                <h1>Special selectors</h1>
+            </section>
             <section>
                 <h2>:host pseudo selector</h2>
                 <ul>
-                    <li>used to target styles to the element hosting the component</li>
+                    <li>used to target styles to the element that hosts the component</li>
                     <li>W3C standard: pseudo class called <span-code>:host</span-code></li>
                     <li>Be careful: <span class="warn">HTMLElements are inline elements per default</span></li>
                     <li>Fix it by applying <span class="code">display: block;</span></li>
@@ -82,6 +85,7 @@
                     <code class="css hljs" data-trim contenteditable>
                         /* my.component.scss */
                         :host {
+                            display: block;
                             background: red;
                         }
                     </code>
@@ -106,6 +110,19 @@
                         }
                     </code>
                 </pre>
+            </section>
+            <section>
+                <h2>::ng-deep & component styles</h2>
+                <ul>
+                    <li>components styles normally apply only to the HTML in the components own template</li>
+                    <li>if you want to apply styles to other components inside - you will need a <span class="code">deep selector</span></li>
+                    <li>there is <span class="code">/deep/</span> and its aliases <span class="code">&gt;&gt;&gt;</span> and <span class="code">::ng-deep</span></li>
+                    <li>always and only use <span class="code">::ng-deep</span></li>
+                </ul>
+            </section>
+            <section>
+                <h2>::ng-deep example</h2>
+                <span class="warn">Add example here</span>
             </section>
         </section>
         <section>
