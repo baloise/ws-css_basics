@@ -127,7 +127,7 @@
                 </ul>
             </section>
             <section>
-                <h2>Style encapsulation in Angular</h2>
+                <h2>Styles in Angular</h2>
                 <ul>
                     <li>Angular has support for custom elements and shadow dom</li>
                     <li>As said before: not all major browser support it</li>
@@ -135,7 +135,7 @@
                 </ul>
             </section>
             <section>
-                <h2>Style encapsulation in Angular (2)</h2>
+                <h2>Styles in Angular (2)</h2>
                 <ul>
                     <li>works with html attributes</li>
                     <li>look sth. like: <span class="code">&lt;h1 _ngcontent-c0&gt;</span></li>
@@ -143,17 +143,17 @@
                 </ul>
             </section>
             <section>
-                <h2>Style encapsulation in Angular (3)</h2>
+                <h2>Styles in Angular (3)</h2>
                 <p>with global color styles</p>
                 <img src="../img/encap_1.png">
             </section>
             <section>
-                <h2>Style encapsulation in Angular (4)</h2>
+                <h2>Styles in Angular (4)</h2>
                 <p>add some font size component styles</p>
                 <img src="../img/encap_2.png">
             </section>
             <section>
-                <h2>Style encapsulation in Angular (5)</h2>
+                <h2>Styles in in Angular (5)</h2>
                 <p>add another component with different color</p>
                 <img src="../img/encap_3.png">
             </section>
@@ -164,6 +164,35 @@
                     <li>no Shadow DOM &#10230; global styles can overwrite component styles</li>
                     <li>isolation is done by using custom attributes</li>
                 </ul>
+            </section>
+            <section>
+                <h2>View Encapsulation in Angular</h2>
+                <ul>
+                    <li>ability to scope css rules to certain parts (e.g. a view)</li>
+                    <li>default in angular projects is <span class="code">Emulated View Encapsulation</span></li>
+                    <li>there are 2 other options: <span class="code">Native</span> and <span class="code">None</span></li>
+                    <li><span class="code">Native</span> - use real Shadow DOM for every component</li>
+                    <li><span class="code">None</span> no attributes applied, no shadow dom &#10230; no encapsulation (global styles)</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Setting View Encapsulation</h2>
+                <pre>
+                    <code class="hljs" data-trim contenteditable>
+                    // app.component.ts
+                    import {Component, ViewEncapsulation} from '@angular/core';
+
+                    @Component({
+                        selector: 'my-app',
+                        templateUrl: './app.component.html',
+                        styleUrls: ['./app.component.css'],
+                        encapsulation: ViewEncapsulation.None
+                    })
+                    export class AppComponent {
+                    }
+					</code>
+                </pre>
+
             </section>
         </section>
 
