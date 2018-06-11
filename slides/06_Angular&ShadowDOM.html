@@ -118,20 +118,51 @@
         </section>
         <section>
             <section>
-                <h2>Style encapsulation in Angular</h2>
-                <ul>
-                    <li>Angular has support for custome elements and shadow dom</li>
-                    <li>As said before: not all major browser support it</li>
-                    <li>Angular emulates this behaviour without using the concepts</li>
-                </ul>
-            </section>
-            <section>
                 <h2>Global styles in an Angular project</h2>
                 <ul>
                     <li>styles array in angular.json</li>
                     <li>global styles.(s)css</li>
                     <li>gets loaded in index.html</li>
                     <li>imported first: before any component styles</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Style encapsulation in Angular</h2>
+                <ul>
+                    <li>Angular has support for custom elements and shadow dom</li>
+                    <li>As said before: not all major browser support it</li>
+                    <li>Angular emulates this behaviour without using the concepts</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Style encapsulation in Angular (2)</h2>
+                <ul>
+                    <li>works with html attributes</li>
+                    <li>look sth. like: <span class="code">&lt;h1 _ngcontent-c0&gt;</span></li>
+                    <li>selector combined with the attribute &#10230; higher specifity</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Style encapsulation in Angular (3)</h2>
+                <p>with global color styles</p>
+                <img src="../img/encap_1.png">
+            </section>
+            <section>
+                <h2>Style encapsulation in Angular (4)</h2>
+                <p>add some font size component styles</p>
+                <img src="../img/encap_2.png">
+            </section>
+            <section>
+                <h2>Style encapsulation in Angular (5)</h2>
+                <p>add another component with different color</p>
+                <img src="../img/encap_3.png">
+            </section>
+            <section>
+                <h2>Summary</h2>
+                <ul>
+                    <li>default in Angular is to use emulated styles</li>
+                    <li>no Shadow DOM &#10230; global styles can overwrite component styles</li>
+                    <li>isolation is done by using custom attributes</li>
                 </ul>
             </section>
         </section>
