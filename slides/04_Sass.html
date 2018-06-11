@@ -48,7 +48,11 @@
                 <h3>Scope/Specificity</h3>
                 <pre>
                     <code class="css hljs" data-trim contenteditable data-noescape>
-
+                        a { ... }
+                        a:hover { ... }
+                        a img { ... }
+                        a:hover img { ... }
+                        a:hover img.extra-spacing { ... }
                     </code>
                 </pre>
             </section>
@@ -97,6 +101,47 @@
                         <div class="block-spacing my-paragraph">
                             Dolor sit amet..
                         </div>
+                    </code>
+                </pre>
+            </section>
+        </section>
+
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Sass Basics</h1>
+        </section>
+        <section>
+            <section>
+                <h3>Variables</h3>
+            </section>
+            <section>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        $width: 5em;
+
+                        .my-button {
+                            $height: 2em;
+                            width: $width;
+                        }
+
+                        .other-button {
+                            height: $height; // won't work
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Scoping</h3>
+            </section>
+            <section>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .my-button {
+                            background-color: papayawhip;
+
+                            img {
+                                outline: none;
+                            }
+                        }
                     </code>
                 </pre>
             </section>
