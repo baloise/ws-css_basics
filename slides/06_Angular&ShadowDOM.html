@@ -67,14 +67,33 @@
                     <li></li>
                 </ul>
             </section>
+        </section>
+        <section>
             <section>
                 <h2>:host pseudo selector</h2>
                 <ul>
                     <li>used to target styles to the element hosting the component</li>
                     <li>W3C standard: pseudo class called <span-code>:host</span-code></li>
                     <li>Be careful: <span class="warn">HTMLElements are inline elements per default</span></li>
-                    <li>Fix it by applaying <span class="code">display: block;</span></li>
+                    <li>Fix it by applying <span class="code">display: block;</span></li>
                 </ul>
+            </section>
+            <section>
+                <h2>Example</h2>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable>
+                        <div>
+                            <my-component></my-component>
+                        </div>
+                    </code>
+
+                    <code class="css hljs" data-trim contenteditable>
+                        /* my.component.scss */
+                        :host {
+                            background: red;
+                        }
+                    </code>
+                </pre>
             </section>
             <section>
                 <h2>:host-context pseudo class function</h2>
@@ -89,11 +108,31 @@
                     </code>
 
                     <code class="css hljs" data-trim contenteditable>
+                        /* my.component.scss */
                         :host-context(.red) {
                             background: red;
                         }
                     </code>
                 </pre>
+            </section>
+        </section>
+        <section>
+            <section>
+                <h2>Style encapsulation in Angular</h2>
+                <ul>
+                    <li>Angular has support for custome elements and shadow dom</li>
+                    <li>As said before: not all major browser support it</li>
+                    <li>Angular emulates this behaviour without using the concepts</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Global styles in an Angular project</h2>
+                <ul>
+                    <li>styles array in angular.json</li>
+                    <li>global styles.(s)css</li>
+                    <li>gets loaded in index.html</li>
+                    <li>imported first: before any component styles</li>
+                </ul>
             </section>
         </section>
 
