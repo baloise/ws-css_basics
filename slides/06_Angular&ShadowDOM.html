@@ -45,10 +45,55 @@
             <section>
                 <h2>Shadow DOM</h2>
                 <ul>
-                    <li> DOM that is isolated from the regular DOM</li>
+                    <li>DOM that is isolated from the regular DOM</li>
                     <li>full encapsulation for javascript and CSS written against this DOM</li>
-                    <li>implemented only in Chrome</li>
+                    <li>currently only implemented in Chrome</li>
                 </ul>
+            </section>
+            <section>
+                <h2>Shadow DOM (2)</h2>
+                <ul>
+                    <li>regular DOM starts with window</li>
+                    <li>Shadow DOM can start with any element of your choice</li>
+                    <li>this element is referred to as the <span class="code">Shadow Host</span></li>
+                    <li>when adding styles to Shadow DOM</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Custom Elements</h2>
+                <ul>
+                    <li>angular components are kind of custom elements</li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </section>
+            <section>
+                <h2>:host pseudo selector</h2>
+                <ul>
+                    <li>used to target styles to the element hosting the component</li>
+                    <li>W3C standard: pseudo class called <span-code>:host</span-code></li>
+                    <li>Be careful: <span class="warn">HTMLElements are inline elements per default</span></li>
+                    <li>Fix it by applaying <span class="code">display: block;</span></li>
+                </ul>
+            </section>
+            <section>
+                <h2>:host-context pseudo class function</h2>
+                <ul>
+                    <li>only apply styles if outer element has certain css class</li>
+                </ul>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable>
+                        <div class="red">
+                            <my-component></my-component>
+                        </div>
+                    </code>
+
+                    <code class="css hljs" data-trim contenteditable>
+                        :host-context(.red) {
+                            background: red;
+                        }
+                    </code>
+                </pre>
             </section>
         </section>
 
