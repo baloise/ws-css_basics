@@ -79,7 +79,57 @@
                 </p>
             </section>
         </section>
-
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Image handling</h1>
+        </section>
+        <section>
+            <section>
+                <h3>SVG</h3>
+                <img src="../img/svg-support.png" width="80%">
+            </section>
+            <section>
+                <h3>High pixel density displays</h3>
+                <figure>
+                    <img src="../img/pixel-density1x.jpg" width="200px">
+                    <img src="../img/pixel-density2x.jpg" width="200px">
+                    <figcaption>Baboon at 1x and 2x the pixel density</figcaption>
+                </figure>
+            </section>
+            <section>
+                <h3>&lt;picture&gt;</h3>
+                <img src="../img/picture-tag-support.png" width="80%">
+            </section>
+            <section>
+                <h3>Example</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+&lt;picture&gt;
+    &lt;source srcset="baboon_s.png 1x, baboon_m.png 2x, baboon_l.png 3x"&gt;
+    &lt;img src="baboon.png" alt="Baboon"&gt;
+&lt;/picture&gt;
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Combine with media queries</h3>
+                <pre>
+                    <code class="html hljs" data-trim contenteditable data-noescape>
+&lt;picture&gt;
+    &lt;source
+        media="(max-width: 450px)"
+        srcset="baboon_s.png 1x, baboon_m.png 2x"
+    &gt;
+    &lt;source
+        media="(max-width: 800px)"
+        srcset="baboon_m.png 1x, baboon_l.png 2x"
+    &gt;
+    &lt;source srcSet="baboon_l.png"&gt;
+    &lt;img src="baboon.png" alt="Baboon"&gt;
+&lt;/picture&gt;
+                    </code>
+                </pre>
+            </section>
+        </section>
         <section>
             <h2>Question Time!</h2>
             <img src="../img/mustache_question.jpg" width="80%">
