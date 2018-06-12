@@ -74,6 +74,7 @@
                 </pre>
             </section>
             <section>
+                <h3>Extension (1)</h3>
                 <pre>
                     <code class="css hljs" data-trim contenteditable data-noescape>
                         .block-spacing {
@@ -92,6 +93,7 @@
                 </pre>
             </section>
             <section>
+                <h3>Extension (2)</h3>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <p class="block-spacing">
@@ -112,8 +114,6 @@
         <section>
             <section>
                 <h3>Variables</h3>
-            </section>
-            <section>
                 <pre>
                     <code class="css hljs" data-trim contenteditable data-noescape>
                         $width: 5em;
@@ -130,9 +130,7 @@
                 </pre>
             </section>
             <section>
-                <h3>Scoping</h3>
-            </section>
-            <section>
+                <h3>Nesting</h3>
                 <pre>
                     <code class="css hljs" data-trim contenteditable data-noescape>
                         .my-button {
@@ -144,6 +142,166 @@
                         }
                     </code>
                 </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .my-button {
+                            background-color: papayawhip;
+                        }
+
+                        .my-button img {
+                            outline: none;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Parent selector</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .my-button {
+                            background-color: papayawhip;
+
+                            &:hover {
+                                background-color: palevioletred;
+                            }
+
+                            img {
+                                outline: none;
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .my-button {
+                            background-color: papayawhip;
+                        }
+
+                        .my-button:hover {
+                            background-color: palevioletred;
+                        }
+
+                        .my-button img {
+                            outline: none;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Mixins (Functions)</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        @mixin border-radius($radius) {
+                            -webkit-border-radius: $radius;
+                               -moz-border-radius: $radius;
+                                -ms-border-radius: $radius;
+                                    border-radius: $radius;
+                        }
+
+                        .box {
+                            @include border-radius(10px);
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .box {
+                            -webkit-border-radius: 10px;
+                            -moz-border-radius: 10px;
+                            -ms-border-radius: 10px;
+                            border-radius: 10px;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3 class="warn">Important</h3>
+                <p>
+                    Mixins return the block each time.<br>
+                    So every call will duplicate the whole code.
+                </p>
+            </section>
+            <section>
+                <h3>Extend/Inheritance</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        %button {
+                            font-family: Helvetica;
+                            padding: 10px;
+                        }
+
+                        .button-primary {
+                            @extend %button;
+                            color: palevioletred;
+                            background-color: papayawhip;
+                        }
+
+                        .button-secondary {
+                            @extend %button;
+                            color: papayawhip;
+                            background-color: palevioletred;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .button-secondary, .button-primary {
+                            font-family: Helvetica;
+                            padding: 10px;
+                        }
+
+                        .button-primary {
+                            color: palevioletred;
+                            background-color: papayawhip;
+                        }
+
+                        .button-secondary {
+                            color: papayawhip;
+                            background-color: palevioletred;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Calculations</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        $grid-width: 960px;
+
+                        .my-button {
+                            width: 300px / $grid-width * 100%;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .my-button {
+                            width: 31.25%;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3 class="warn">Important</h3>
+                <p>
+                    These are compile time calculations.<br>
+                    No calculation on runtime values.
+                </p>
             </section>
         </section>
 
