@@ -305,6 +305,64 @@
             </section>
         </section>
 
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Imports</h1>
+        </section>
+        <section>
+            <section>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        // _reset.scss
+                        html, body, ul, ol {
+                            margin:  0;
+                            padding: 0;
+                        }
+
+                        // main.scss
+                        @import 'reset';
+
+                        body {
+                            font: 100% Helvetica, sans-serif;
+                            background-color: #efefef;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        html, body, ul, ol {
+                            margin:  0;
+                            padding: 0;
+                        }
+
+                        body {
+                            font: 100% Helvetica, sans-serif;
+                            background-color: #efefef;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3 class="warn">Important</h3>
+                <ul>
+                    <li><span class="code">@import</span> will just dump the content of the file</li>
+                    <li>No dependency graph -> duplication of every imported file</li>
+                    <li>Files which emit styles should never be imported more than once</li>
+                    <li>
+                        There are packages which fix this behaviour:<br>
+                        <a href="https://github.com/wilsonpage/sass-import-once" target="_blank">
+                            https://github.com/wilsonpage/sass-import-once
+                        </a><br>
+                        <a href="https://www.npmjs.com/package/node-sass-import-once" target="_blank">
+                            https://www.npmjs.com/package/node-sass-import-once
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
         <section>
             <h2>Question Time!</h2>
             <img src="../img/mustache_question.jpg" width="80%">
