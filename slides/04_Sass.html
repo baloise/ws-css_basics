@@ -194,6 +194,30 @@
                 </pre>
             </section>
             <section>
+                <h3>Parent selector (2)</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .container {
+                            .button {
+                                .small & {
+                                    font-size: 24px;
+                                }
+                            }
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Compiles to</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .small .container .button {
+                            font-size: 24px;
+                        }
+                    </code>
+                </pre>
+            </section>
+            <section>
                 <h3>Mixins (Functions)</h3>
                 <pre>
                     <code class="css hljs" data-trim contenteditable data-noescape>
