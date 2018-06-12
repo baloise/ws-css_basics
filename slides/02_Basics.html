@@ -271,6 +271,89 @@
         </section>
 
         <section class="deck-slide" data-background="#E5F3F9">
+            <h1>User Agent Styles</h1>
+        </section>
+        <section>
+            <section>
+                <h3>Base Styling of each Browser</h3>
+                <ul>
+                    <li>Browser specific</li>
+                    <li>Overwritten by anything you set in your css</li>
+                    <li>Except if you omit &lt;!DOCTYPE&gt;</li>
+                    <li>Fallback when no styling</li>
+                    <li>Pitfalls: paddings and margins</li>
+                </ul>
+            </section>
+            <section>
+                <h3>Visible in Dev Tools</h3>
+                <img src="../img/user-agent-stylesheet.png">
+            </section>
+            <section>
+                <h3>reset.css/normalize.css</h3>
+                <ul>
+                    <li>Overwrite all common UA Stylesheets</li>
+                    <li>For all browsers</li>
+                    <li>Start from scratch with your application styles</li>
+                </ul>
+            </section>
+            <section>
+                <h3>reset vs normalize</h3>
+                <ul>
+                    <li>reset removes all browser styling</li>
+                    <li>normalize tries to make browser styling consistent</li>
+                    <li>
+                        <a href="http://nicolasgallagher.com/about-normalize-css/" target="_blank">
+                            http://nicolasgallagher.com/about-normalize-css/
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="deck-slide" data-background="#E5F3F9">
+            <h1>Best Practices</h1>
+        </section>
+        <section>
+            <section>
+                <h3>Classes instead of long selectors</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        // DO
+                        .my-button {}
+                        .my-button:hover {}
+                        .my-button__icon {}
+
+                        // DON'T
+                        body div section > button {}
+                        body div section > button:hover {}
+                        body div section > button i {}
+                    </code>
+                </pre>
+                <p>
+                    Check out <a href="http://getbem.com/">http://getbem.com/</a>.
+                </p>
+            </section>
+            <section>
+                <h3>Inside out styling</h3>
+                <ul>
+                    <li>Start from inside with paddings/borders/margins</li>
+                    <li>Don't fix containers to height and try to center content</li>
+                    <li>Set a line-height (usually somewhere around 1.3)</li>
+                </ul>
+                <img src="../img/inside-out.jpg" />
+            </section>
+            <section>
+                <h3>As few properties as possible</h3>
+                <ul>
+                    <li>Set as few CSS properties as possible for your classes</li>
+                    <li>Every additional property can have side effects for your children</li>
+                    <li>Often you hunt problems introduced by parent styles</li>
+                    <li>Don't blindly copy stuff from StackOverflow et al.</li>
+                </ul>
+            </section>
+        </section>
+
+        <section class="deck-slide" data-background="#E5F3F9">
             <h1>Chrome Dev Tools</h1>
             <aside class="notes">
                 live demo!
