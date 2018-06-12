@@ -29,14 +29,41 @@
         </section>
 
         <section class="deck-slide" data-background="#E5F3F9">
-            <h1>Media Queries and Image Handling and stuff</h1>
+            <h1>Media Queries</h1>
         </section>
         <section>
             <section>
-                <h3>tbd</h3>
-                <p>
+                <h3>Adapt styles according to screen size</h3>
+                <img src="../img/media-queries.png" width="80%">
+            </section>
+            <section>
+                <h3>Syntax</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        @media (max-width: 70em) { }
+                        @media print { }
+                        @media screen and (min-width: 1024px) { }
+                        @media screen and (min-height: 500px) { }
+                        @media screen and (max-device-width: 1024px) { }
+                        @media screen and (min-resolution: 96dpi) { }
+                    </code>
+                </pre>
+            </section>
+            <section>
+                <h3>Example</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable data-noescape>
+                        .header {
+                            padding: 20em;
+                        }
 
-                </p>
+                        @media screen and (max-width: 768px) {
+                            .header {
+                                padding: 5em;
+                            }
+                        }
+                    </code>
+                </pre>
             </section>
         </section>
 
