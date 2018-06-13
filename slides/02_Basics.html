@@ -33,7 +33,11 @@
         <section>
             <section>
                 <h2>By Id</h2>
-                <h3>#awesomeId</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        #awesomeId { }
+                    </code>
+                </pre>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <body>
@@ -44,7 +48,11 @@
             </section>
             <section>
                 <h2>By Class</h2>
-                <h3>.some_class</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        .some_class { }
+                    </code>
+                </pre>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <body>
@@ -55,7 +63,11 @@
             </section>
             <section>
                 <h2>By Type (tag)</h2>
-                <h3>span</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        span { }
+                    </code>
+                </pre>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <body>
@@ -66,7 +78,11 @@
             </section>
             <section>
                 <h2>By Attribute</h2>
-                <h3>[href="google.ch"]</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        [href="google.ch"] { }
+                    </code>
+                </pre>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <body>
@@ -77,7 +93,11 @@
             </section>
             <section>
                 <h2>By Pseudo Class</h2>
-                <h3>:first-child</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        div:first-child { }
+                    </code>
+                </pre>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <body>
@@ -91,12 +111,18 @@
             </section>
             <section>
                 <h2>Universal Selectors</h2>
-                <h3>*</h3>
+                <pre>
+                    <code class="css hljs" data-trim contenteditable>
+                        * { }
+                    </code>
+                </pre>
                 <pre>
                     <code class="html hljs" data-trim contenteditable>
                         <body>
                             <div></div>
-                            <span></span>
+                            <span>
+                                <i></i>
+                            </span>
                             <a></a>
                         </body>
                     </code>
@@ -117,7 +143,7 @@
             <section>
                 <h2>Same precedence?</h2>
                 <p>
-                    The latest declaration will win
+                    The last declaration will win
                 </p>
             </section>
             <section>
