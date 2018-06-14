@@ -12,13 +12,11 @@ img {
   box-shadow: none !important; }
 
 figure img {
-  margin-bottom: 0 !important;
-}
+  margin-bottom: 0 !important; }
 
 figure figcaption {
   font-size: 0.5em !important;
-  margin-top: -10px !important;
-}
+  margin-top: -10px !important; }
 
 .window-background .present {
   background-position-y: 0.5em; }
