@@ -116,14 +116,31 @@
                 <h2>::ng-deep & component styles</h2>
                 <ul>
                     <li>components styles normally apply only to the HTML in the components own template</li>
-                    <li>if you want to apply styles to other components inside - you will need a <span class="code">deep selector</span></li>
+                    <li>if you want to apply styles to other components inside (childs) - you will need a <span class="code">deep selector</span></li>
                     <li>there is <span class="code">/deep/</span> and its aliases <span class="code">&gt;&gt;&gt;</span> and <span class="code">::ng-deep</span></li>
                     <li>always and only use <span class="code">::ng-deep</span></li>
                 </ul>
             </section>
             <section>
                 <h2>::ng-deep example</h2>
-                <span class="warn">Add example here</span>
+                <pre>
+                    <code class="hljs" data-trim contenteditable>
+                    // app.component.scss
+                    .first {
+                        color: yellowgreen;
+                    }
+
+                    ::ng-deep .second {
+                        color: deeppink;
+                    }
+					</code>
+                    <code class="hljs" data-trim contenteditable>
+                        &lt;!-- inner component html -->
+                        &lt;h2>My inner&lt;/h2>
+                        &lt;p class="first">p in inner, class first&lt;/p>
+                        &lt;p class="second">2nd p in inner, class second&lt;/p>
+                    </code>
+                </pre>
             </section>
         </section>
         <section>
